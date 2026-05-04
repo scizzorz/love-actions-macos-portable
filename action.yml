@@ -251,7 +251,7 @@ runs:
     - name: Modify XCode project
       shell: bash
       run: |
-        npm i plist xcode
+        npm i plist@4.0.0 xcode
 
         cat <<EOT >> temp.js
         const fs = require('fs');
