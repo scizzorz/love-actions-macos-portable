@@ -184,7 +184,7 @@ runs:
         mkdir -p ./love-actions-macos-portable/
         mkdir -p ${{ inputs.output-folder }}
     - name: Checkout love
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
       with:
         path: ./love-actions-macos-portable/love
         ref: ${{ inputs.love-ref }}
@@ -197,7 +197,7 @@ runs:
         cd ./love-actions-macos-portable/love
         git apply ./love.patch
     - name: Checkout framework SDK
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
       with:
         path: ./love-actions-macos-portable/love-apple-dependencies
         ref: 402eed62c2bd654a860bb64544393285fb640497
