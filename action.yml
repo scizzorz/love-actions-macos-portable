@@ -305,7 +305,7 @@ runs:
                         {target: loveProject.findTargetKey('"' + loveTarget + '"')}
                     );
                     loveProject.removeFromLibrarySearchPaths({path: filename})
-                } else if (path.extname(filename) === '.dylib') {
+                } else if (path.extname(filename) === '.dylib' || path.extname(filename) === '.so') {
                     const dylibFile = loveProject.addFile(
                         filename,
                         loveProject.findPBXGroupKey({name: 'love'}),
